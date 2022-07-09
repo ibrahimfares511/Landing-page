@@ -1,0 +1,142 @@
+:root {
+	--main-color: hsl(257, 40%, 49%);
+	--second-color: hsl(300, 69%, 71%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+main {
+	width: 100vw;
+	height: 100vh;
+	padding-bottom: 20px;
+	background-image: url(../images/bg-desktop.svg);
+	background-color: var(--main-color);
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+}
+@media (min-width: 576px) {
+	.container {
+		width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1140px;
+	}
+}
+main nav {
+	padding: 60px 0;
+}
+main nav img {
+	max-width: 100%;
+}
+main header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+}
+main header .image,
+main header .content {
+	flex-basis: 50%;
+}
+main header .image img {
+	max-width: 100%;
+}
+main header .content h2 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 3em;
+	color: white;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+main header .content p {
+	color: white;
+	line-height: 1.5;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+main header .content button {
+	background: white;
+	color: var(--main-color);
+	font-size: 1em;
+	text-align: center;
+	width: 170px;
+	padding: 15px;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+	box-shadow: 0px 4px 10px #353535;
+}
+main footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20px;
+}
+main footer i {
+	color: white;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid white;
+	height: 2.2em;
+	width: 2.2em;
+	text-align: center;
+	line-height: 2.2em !important;
+}
+@media (max-width: 500px) {
+	main {
+		padding-bottom: 10px;
+	}
+	main .container {
+		justify-content: center;
+	}
+	main nav {
+		padding: 30px 0;
+	}
+	main header {
+		flex-direction: column;
+		gap: 20px;
+	}
+	main header .image img {
+		width: 100%;
+		max-width: 300px;
+	}
+	main header .content {
+		text-align: center;
+	}
+	main header .content h2 {
+		font-size: 2em;
+		margin-bottom: 15px;
+	}
+	main header .content p {
+		font-size: 1.1em;
+	}
+	main footer {
+		justify-content: center;
+		margin-top: 15px;
+	}
+}
